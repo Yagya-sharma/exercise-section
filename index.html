@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Healing Exercises</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💗 Gentle Exercise & Movement</h1>
+    <p>Short, soothing routines to reduce stress, boost energy, and feel grounded.</p>
+  </header>
+
+  <main class="wrap">
+    <!-- FILTERS -->
+    <div class="filters" role="toolbar" aria-label="Filter exercise type">
+      <button class="chip" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter="Stretch">Stretch</button>
+      <button class="chip" data-filter="Yoga">Yoga</button>
+      <button class="chip" data-filter="Breathing">Breathing</button>
+      <button class="chip" data-filter="Strength">Strength</button>
+    </div>
+
+    <!-- QUICK CLIPS -->
+    <h2 class="section-title">Quick Clips (Short Videos)</h2>
+    <section class="grid" id="clipsGrid">
+      <!-- Card 1 -->
+      <article class="card" data-tags="Stretch" data-video="neck.mp4">
+        <span class="badge">Stretch</span>
+        <div class="thumb">
+          <video src="neck.mp4" muted loop></video>
+          <div class="play-overlay">
+            <button class="play-btn" data-role="clip-play" aria-label="Play clip">▶</button>
+          </div>
+        </div>
+        <div class="content">
+          <div class="title">Neck & Shoulder Ease</div>
+          <div class="meta">2 min • Seated gentle stretch</div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" data-tags="Breathing" data-video="breathe.mp4">
+        <span class="badge">Breathing</span>
+        <div class="thumb">
+          <video src="breathe.mp4" muted loop></video>
+          <div class="play-overlay">
+            <button class="play-btn" data-role="clip-play" aria-label="Play clip">▶</button>
+          </div>
+        </div>
+        <div class="content">
+          <div class="title">Box Breathing Calm</div>
+          <div class="meta">3 min • Nervous system reset</div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" data-tags="Yoga" data-video="chair exercise.mp4">
+        <span class="badge">Yoga</span>
+        <div class="thumb">
+          <video src="chair exercise.mp4" muted loop></video>
+          <div class="play-overlay">
+            <button class="play-btn" data-role="clip-play" aria-label="Play clip">▶</button>
+          </div>
+        </div>
+        <div class="content">
+          <div class="title">Chair Yoga Flow</div>
+          <div class="meta">4 min • Gentle mobility</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- YOUTUBE SESSIONS -->
+    <h2 class="section-title">Guided Sessions (YouTube)</h2>
+    <section class="grid" id="ytGrid">
+      <article class="card" data-tags="Yoga" data-yt="v7AYKMP6rOE">
+        <span class="badge">Yoga</span>
+        <div class="thumb">
+          <img loading="lazy" src="https://i.ytimg.com/vi/v7AYKMP6rOE/hqdefault.jpg" alt="Gentle Yoga"/>
+          <div class="play-overlay"><button class="play-btn" data-role="yt-load">▶</button></div>
+        </div>
+        <div class="content"><div class="title">Gentle Yoga — 10 min</div><div class="meta">Full-body wake up</div></div>
+      </article>
+
+      <article class="card" data-tags="Breathing" data-yt="aXItOY0sLRY">
+        <span class="badge">Breathing</span>
+        <div class="thumb">
+          <img loading="lazy" src="https://i.ytimg.com/vi/aXItOY0sLRY/hqdefault.jpg" alt="Breathwork for calm"/>
+          <div class="play-overlay"><button class="play-btn" data-role="yt-load">▶</button></div>
+        </div>
+        <div class="content"><div class="title">Breathwork for Calm — 8 min</div><div class="meta">Guided diaphragmatic breathing</div></div>
+      </article>
+
+      <article class="card" data-tags="Strength" data-yt="UItWltVZZmE">
+        <span class="badge">Strength</span>
+        <div class="thumb">
+          <img loading="lazy" src="https://i.ytimg.com/vi/UItWltVZZmE/hqdefault.jpg" alt="Low impact strength"/>
+          <div class="play-overlay"><button class="play-btn" data-role="yt-load">▶</button></div>
+        </div>
+        <div class="content"><div class="title">Low-Impact Strength — 12 min</div><div class="meta">Joint-friendly moves</div></div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Popup modal -->
+  <div class="modal" id="videoModal">
+    <button class="modal-close" id="modalClose">✖</button>
+    <div class="modal-content"><video controls autoplay></video></div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
